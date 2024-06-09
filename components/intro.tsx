@@ -10,7 +10,6 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -63,15 +62,15 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Sandeep.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">6 years</span> of experience. I enjoy
-        building <span className="italic">websites & apps</span>. My focus in
-        Frontend is on{" "}
-        <span className="underline">React, Angular, Next JS , </span>
-        and in Backend on{" "}
+        <span className="font-bold">Hello, I'm Sandeep, </span> a{" "}
+        <span className="font-bold">full-stack developer</span> with {" "}
+        <span className="font-bold">6 years</span> of experience in building {" "}
+        <span className="italic">websites and applications</span>. My expertise
+        lies in frontend technologies such as {" "}
+        <span className="underline">React, Angular, Next JS {" "} </span>
+        as well as backend development with {" "}
         <span className="underline">
-          Node JS and Java Spring Boot Microservices
+          Node JS and Java Spring Boot microservices
         </span>
         .
       </motion.h1>
@@ -98,7 +97,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/RESUME.pdf"
+          href="https://sandeepbanuka.github.io/portfolio/RESUME.pdf"
           download
         >
           Download CV{" "}
