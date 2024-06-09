@@ -30,14 +30,14 @@ export default function Intro() {
               duration: 0.2,
             }}
           >
-            <Image
+            <img
               src="/Profile_Img.jpg"
               alt="Ricardo portrait"
               width="192"
               height="192"
-              quality="95"
-              priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              //  quality="95"
+              //  priority={true}
+              className="h-48 w-48 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -67,7 +67,7 @@ export default function Intro() {
         <span className="font-bold">6 years</span> of experience. I enjoy
         building <span className="italic">websites & apps</span>. My focus in
         Frontend is on{" "}
-        <span className="underline">React, Angular, Next JS ,  </span>
+        <span className="underline">React, Angular, Next JS , </span>
         and in Backend on{" "}
         <span className="underline">
           Node JS and Java Spring Boot Microservices
