@@ -35,20 +35,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Software Engineer Intern",
-    location: "Hyderabad , India",
+    title: "Senior Software Engineer",
+    location: "United States",
     description:
-      "I have pursued internship in my final semester of my College. Converted as a full time after the completion of Internship.",
+      "I am currently working as a senior engineer. My stack includes Angular , React, Next.js, TypeScript, MongoDB. Currently leadng a team of 3 junior developers .I'm open to full-time opportunities.",
     icon: React.createElement(CgWorkAlt),
-    date: "2017 - 2018",
-  },
-  {
-    title: "Software Engineer",
-    location: "Hyderabad , India",
-    description:
-      "I worked as a full stack developer with Angular in Frontend and Node JS in backend. Developed a Content Management System as a SaaS based product. ",
-    icon: React.createElement(CgWorkAlt),
-    date: "2018 - 2019",
+    date: "2023 - present",
   },
   {
     title: "Senior Software Engineer",
@@ -59,12 +51,20 @@ export const experiencesData = [
     date: "2019 - 2022",
   },
   {
-    title: "Senior Software Engineer",
-    location: "United States",
+    title: "Software Engineer",
+    location: "Hyderabad , India",
     description:
-      "I am currently working as a senior engineer. My stack includes Angular , React, Next.js, TypeScript, MongoDB. Currently leadng a team of 3 junior developers .I'm open to full-time opportunities.",
+      "I worked as a full stack developer with Angular in Frontend and Node JS in backend. Developed a Content Management System as a SaaS based product. ",
     icon: React.createElement(CgWorkAlt),
-    date: "2023 - present",
+    date: "2018 - 2019",
+  },
+  {
+    title: "Software Engineer Intern",
+    location: "Hyderabad , India",
+    description:
+      "I have pursued internship in my final semester of my College. Converted as a full time after the completion of Internship.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2017 - 2018",
   },
 ] as const;
 
