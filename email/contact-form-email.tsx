@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Html,
   Body,
@@ -17,28 +16,31 @@ type ContactFormEmailProps = {
   senderEmail: string;
 };
 
-export default function ContactFormEmail({
+const ContactFormEmail = ({
   message,
   senderEmail,
-}: ContactFormEmailProps) {
+}: ContactFormEmailProps) => {
   return (
     <Html>
       <Head />
       <Preview>New message from your portfolio site</Preview>
-      <Tailwind>
-        <Body className="bg-gray-100 text-black">
-          <Container>
-            <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
-              <Heading className="leading-tight">
-                You received the following message from the contact form
-              </Heading>
-              <Text>{message}</Text>
-              <Hr />
-              <Text>The sender's email is: {senderEmail}</Text>
-            </Section>
-          </Container>
-        </Body>
-      </Tailwind>
+      <Body style={{ backgroundColor: "#f3f4f6" }}>
+        <Container>
+          <Section style={{ 
+            backgroundColor: "#fff",
+            padding: "20px",
+            margin: "40px auto",
+            borderRadius: "6px",
+          }}>
+            <Heading>You received the following message from the contact form</Heading>
+            <Text>{message}</Text>
+            <Hr />
+            <Text>The sender's email is: {senderEmail}</Text>
+          </Section>
+        </Container>
+      </Body>
     </Html>
   );
 }
+
+export default ContactFormEmail;

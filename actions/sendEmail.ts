@@ -1,47 +1,41 @@
 "use server";
 
-import React from "react";
-import { Resend } from "resend";
-import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
+import { validateString } from "@/lib/utils";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const sendEmail = async (formData: FormData) => {
+  const senderEmail = formData.get("senderEmail");
+  const message = formData.get("message");
 
-// export const sendEmail = async (formData: FormData) => {
-//   const senderEmail = formData.get("senderEmail");
-//   const message = formData.get("message");
+  // simple server-side validation
+  if (!validateString(senderEmail, 500)) {
+    return {
+      error: "Invalid sender email",
+    };
+  }
+  if (!validateString(message, 5000)) {
+    return {
+      error: "Invalid message",
+    };
+  }
 
-//   // simple server-side validation
-//   if (!validateString(senderEmail, 500)) {
-//     return {
-//       error: "Invalid sender email",
-//     };
-//   }
-//   if (!validateString(message, 5000)) {
-//     return {
-//       error: "Invalid message",
-//     };
-//   }
-
-//   let data;
-//   try {
-//     data = await resend.emails.send({
-//       from: senderEmail,
-//       to: "sandeepbanuka0922@gmail.com",
-//       subject: "Message from " + sendEmail,
-//       reply_to: senderEmail,
-//       react: React.createElement(ContactFormEmail, {
-//         message: message,
-//         senderEmail: senderEmail,
-//       }),
-//     });
-//   } catch (error: unknown) {
-//     return {
-//       error: getErrorMessage(error),
-//     };
-//   }
-
-//   return {
-//     data,
-//   };
-// };
+  try {
+    // Here you can implement your own email handling logic
+    // For example, you could:
+    // 1. Log the messages to a database
+    // 2. Use a different email service
+    // 3. Store messages for later processing
+    
+    // For now, we'll just return a success response
+    return {
+      data: {
+        message: "Message received successfully",
+        senderEmail: senderEmail as string,
+        messageContent: message as string
+      }
+    };
+  } catch (error: unknown) {
+    return {
+      error: "Failed to send message. Please try again later."
+    };
+  }
+};
